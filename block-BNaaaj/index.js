@@ -1,6 +1,6 @@
 console.log('Welcome to Nodejs');
 var os = require('os');
-let cpus = os.cpus();
+let cpus = os.cpus().length;
 let freemem = os.freemem();
 let uptime =os.uptime();
 let osVersion = os.version();
@@ -10,7 +10,11 @@ let buff1 = Buffer.alloc(12);
 buff1.write('Upendra rajput');
 console.log(buff1.toString());
 
-var {readFile , readFileSync} = require('fs');
+var {readFile , readFileSync,unlink} = require('fs');
+var sync = readFileSync('./app.js');
+readFile('./app.js',(err,content)=>{
+    console.log(err,content.toString);
+})
 
 
 
