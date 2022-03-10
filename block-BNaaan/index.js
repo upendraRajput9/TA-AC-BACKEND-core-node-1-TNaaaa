@@ -2,7 +2,7 @@ var http = require('http')
 var server= http.createServer(handleRequest);
 
 function handleRequest(req,resp){
-console.log(req.header);
+console.log(req.headers);
 console.log(req.method,req.url);
 
 resp.end('Welcome')
