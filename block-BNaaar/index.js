@@ -1,6 +1,4 @@
 var http = require('http');
-// var url = require('url');
-
 var server = http.createServer(handleRequest);
 
 function handleRequest(req,res){
