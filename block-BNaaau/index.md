@@ -5,20 +5,65 @@ Q. Create a basic server using http's createServer
   - console request and response object
   - do a request using browser on `localhost:5000`
   - check out console for request and response object
+```js
+var http = require('http');
+var server = http.createServer(handleRequest);
+
+function handleRequest(req,res){
+    console.log(req,res)
+}
+
+server.listen(5000,()=>{
+    console.log('server listening a port 5000')
+})
+```
+
 
 Q. create a node server 
   - add listener on port 5100
   - respond with 'My first server in NodeJS' using response object
+```js
+var http = require('http');
+var server = http.createServer(handleRequest);
+
+function handleRequest(req,res){
+    res.end('My first server in NodeJS')
+}
+
+server.listen(5100,()=>{
+    console.log('server listening a port 5100')
+})
+```
 
 Q. write code to create a node server 
   - add listener on port 5555
   - console request headers
   - respond with content of user-agent from request headers.
+  
+
+ ```js
+ var http = require('http');
+var server = http.createServer(handleRequest);
+
+function handleRequest(req,res){
+    console.log(req.setHeader);
+    
+}
+
+server.listen(5555,()=>{
+    console.log('server listening a port 5555')
+})
+``` 
 
 Q. write code to create a node server 
   - add listener on port 5566
   - console request url and request method
   - return a text response with requested url and method
+
+
+
+
+
 
 Q. write code to create a node server 
   - add listener on port 7000
